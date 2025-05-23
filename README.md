@@ -154,6 +154,7 @@ Gambar di atas dapat diinterpretasikan sebagai berikut:
 > Oleh karena itu, tidak perlu dilakukan deteksi atau penanganan outlier untuk fitur-fitur ini.
 
 ## Data Preparation
+
 ### Data Cleaning
 #### 1. Menghapus data duplikat
 <p align="center">
@@ -164,6 +165,20 @@ hasil drop data duplikat:
 <p align="center">
   <img src="https://github.com/user-attachments/assets/924ff3a4-b393-4dc2-80d3-e3400ed97646" width="800"/>
 </p>
+
+### Data Splitting
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/eba32abc-2387-46bd-a480-124f43734f27" width="800"/>
+</p>
+Target pada dataset ini adalah variabel `At Risk (Binary)`. Untuk itu kedua target bawaan dataset seperti `At Risk (Binary)` dan `Stroke Risk (%)` perlu dihapus dahulu sebelum membuat model baru nantinya. Selain itu, melakukan split data dengan skema data training sebesar 80% untuk melatih model dan 20% untuk menguji model.
+
+### Standarisasi
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/88c495a4-0cd3-4b61-9bd9-5357faf77b9c" width="800"/>
+</p>
+Agar algoritma machine learning dapat bekerja secara optimal dan mencapai konvergensi lebih cepat, sangat disarankan untuk menggunakan data yang memiliki skala seragam dan distribusi mendekati normal. Proses standarisasi seperti yang dilakukan oleh StandardScaler membantu mengubah fitur data menjadi rentang yang konsisten dengan rata-rata nol dan standar deviasi satu. Hal ini sangat penting terutama ketika fitur memiliki satuan atau skala yang berbeda-beda, sehingga algoritma dapat memproses setiap fitur secara adil tanpa dipengaruhi oleh perbedaan skala.
+
+
 
 
 
