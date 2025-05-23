@@ -201,7 +201,7 @@ Menentukan jumlah CPU core yang digunakan saat pelatihan. Nilai -1 berarti XGBoo
 - `eval_metric = 'mlogloss'`
 Metrik evaluasi yang digunakan adalah multiclass logarithmic loss, yang umum dipakai dalam klasifikasi multi-kelas. Ini membantu XGBoost untuk menyesuaikan bobot model terhadap kesalahan prediksi kelas.
 
-`objective = 'multi:softmax'`
+- `objective = 'multi:softmax'`
 Menentukan jenis tugas klasifikasi multi-kelas. Dengan 'multi:softmax', XGBoost akan mengklasifikasikan data ke salah satu dari beberapa kelas secara langsung (bukan probabilitas, melainkan prediksi kelas akhir).
 
 ### 2. Random Forest
@@ -229,13 +229,20 @@ Kernel Radial Basis Function (RBF) digunakan untuk mengubah data input ke dalam 
 Parameter ini menetapkan nilai seed untuk pengacakan proses internal SVM, seperti pemilihan subset data saat pelatihan. Tujuannya adalah agar proses pelatihan model dapat menghasilkan hasil yang konsisten dan dapat diulang kembali dalam eksperimen yang sama.
 
 ### Evaluasi Hasil Perbandingan Algoritma
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/09c3fa25-8cf5-44cb-866f-439756b07c92" width="600"/>
+</p>
+
 | **Algoritma**                    | **Kelebihan**                                                                                                                    | **Kekurangan**                                                                                   |
 | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | **XGBoost Classifier**           | - Tingkat akurasi sangat tinggi<br>- Dilengkapi regularisasi untuk cegah overfitting<br>- Tangguh untuk data yang tidak seimbang | - Waktu pelatihan cenderung lebih lama<br>- Perlu penyesuaian parameter yang kompleks            |
 | **Random Forest**                | - Dapat mengolah data non-linear dan banyak fitur<br>- Lebih tahan terhadap overfitting dibanding pohon tunggal                  | - Model sulit dijelaskan secara intuitif<br>- Butuh sumber daya komputasi besar (memori & waktu) |
 | **Support Vector Machine (SVM)** | - Sangat cocok untuk data berdimensi tinggi<br>- Ideal untuk dataset kecil dengan pemisahan kelas yang jelas                     | - Tidak optimal untuk dataset besar<br>- Sensitif terhadap pilihan kernel dan parameter          |
 
+## Evaluasi
+Dari hasil perbandingan 3 Algoritma diatas, saya memilih model `XGBoost` karena model menghasilkan nilai akurasi yang paling baik karena tidak mendekati overfitting.
 
+### 
 
 
 
