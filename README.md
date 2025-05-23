@@ -118,4 +118,15 @@ Gambar di atas dapat diinterpretasikan sebagai berikut:
 > Ditemukan sebanyak **1021** data duplikat dalam dataset ini. Oleh karena itu, selanjutnya akan dilakukan proses pembersihan data (data cleaning) sangat penting untuk memastikan bahwa dataset yang digunakan bebas dari redundansi, sehingga hasil prediksi menjadi lebih akurat dan dapat diandalkan.
 
 ## Data Preparation
+### Data Cleaning
+#### 1. Menghapus data duplikat
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/eec69b39-1b89-42de-bb1b-eb5cecf5b25e" width="800"/>
+</p>
+
+#### 2. Mengecek dan menangani Missing Value
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f270d335-a168-4b2f-aba6-78c952cd4c18" width="800"/>
+</p>
+> **insight:** Tidak ditemukan missing value pada dataframe diatas
 
