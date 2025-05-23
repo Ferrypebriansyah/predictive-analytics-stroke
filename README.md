@@ -63,3 +63,23 @@ Tahap ini merupakan proses analisis data yang bertujuan untuk memperoleh pemaham
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9bf9d843-192a-4859-a59e-c26b4542adb4" width="1000"/>
 </p>
+
+Gambar di atas dapat diinterpretasikan sebagai berikut:
+1. Chest Pain: Jumlah responden yang mengalami dan tidak mengalami nyeri dada relatif seimbang.
+2. Shortness of Breath: Responden yang mengalami sesak napas dan yang tidak mengalaminya hampir seimbang.
+3.Irregular Heartbeat: Proporsi antara yang mengalami detak jantung tidak teratur dan yang tidak juga cukup seimbang.
+4.Fatigue & Weakness: Tingkat kelelahan dan kelemahan hampir merata di antara responden.
+5.Dizziness: Responden yang mengalami pusing dan tidak mengalami menunjukkan jumlah yang sebanding.
+6.Swelling (Edema): Pembengkakan (edema) juga terjadi pada proporsi yang hampir sama antara kedua kelompok.
+7. Pain in Neck/Jaw/Shoulder/Back: Jumlah responden yang merasakan nyeri di bagian tersebut relatif seimbang dengan yang tidak merasakan.
+8. Excessive Sweating: Responden yang mengalami keringat berlebihan hampir setara dengan yang tidak.
+9. Persistent Cough: Jumlah responden dengan dan tanpa batuk berkepanjangan hampir setara.
+10. Nausea/Vomiting: Tidak ada perbedaan mencolok antara responden yang mengalami dan yang tidak.
+11. High Blood Pressure: Tekanan darah tinggi dialami dan tidak dialami oleh responden dalam jumlah yang hampir sama.
+12. Chest Discomfort (Activity): Jumlah responden yang mengalami ketidaknyamanan dada saat aktivitas hampir seimbang.
+13. Cold Hands/Feet: Responden dengan dan tanpa gejala tangan/kaki dingin hampir setara jumlahnya.
+14. Snoring/Sleep Apnea: Proporsi antara yang mengalami dan tidak mengalami mendengkur/sleep apnea cukup seimbang.
+15. Anxiety/Feeling of Doom: Kecemasan atau firasat buruk dialami oleh hampir setengah dari responden.
+16. Age: Distribusi usia cukup merata, tidak condong ke kelompok usia tertentu.
+17. Stroke Risk (%): Distribusi risiko stroke mengikuti pola normal, dengan mayoritas berada di risiko sedang.
+18. At Risk (Binary): Proporsi responden yang tergolong berisiko dan tidak berisiko relatif seimbang.
