@@ -4,7 +4,6 @@
 - **ID Dicoding:** ferrypebriansyah
 
 ## Domain Proyek
-
 Stroke merupakan salah satu penyebab utama kematian dan kecacatan di Indonesia. Penyakit ini terjadi akibat gangguan aliran darah ke otak, yang menyebabkan kerusakan pada jaringan otak dan mengakibatkan gangguan fungsi tubuh, baik secara fisik, bicara, maupun kognitif. Dalam beberapa kasus, stroke bahkan dapat menyebabkan kematian secara tiba-tiba jika tidak segera mendapatkan penanganan.
 
 Berdasarkan Data Riset Kesehatan Dasar (Riskesdas) 2018, prevalensi stroke di Indonesia mencapai 10,9 per 1.000 penduduk, dengan angka kejadian tertinggi terjadi di Provinsi Sulawesi Selatan. Angka ini mengalami peningkatan dibandingkan data sebelumnya pada tahun 2013 yang menunjukkan angka 7 per 1.000 penduduk. Hal ini menunjukkan bahwa stroke menjadi beban kesehatan yang makin besar bagi masyarakat Indonesia.
@@ -34,7 +33,7 @@ Untuk menjawab permasalahan yang telah dirumuskan, solusi yang diusulkan dalam p
 2. Penerapan inference untuk menentukan gejala dan faktor mana yang paling signifikan dalam mempengaruhi risiko stroke.
 
 ## Data Understanding
-Dataset yang digunakan untuk memprediksi risiko stroke pada seseorang diperoleh dari platform open source Kaggle dan dipublikasikan oleh mahatiratusher. Dataset ini dirancang untuk memperkirakan kemungkinan seseorang mengalami stroke berdasarkan berbagai gejala klinis dan faktor risiko kesehatan lainnya. Data mencakup informasi dari berbagai individu yang dilengkapi dengan 19 fitur serta label risiko stroke.
+Dataset yang digunakan untuk memprediksi risiko stroke pada seseorang diperoleh dari platform open source Kaggle dan dipublikasikan oleh mahatiratusher [sumber](https://www.kaggle.com/datasets/mahatiratusher/stroke-risk-prediction-dataset). Dataset ini dirancang untuk memperkirakan kemungkinan seseorang mengalami stroke berdasarkan berbagai gejala klinis dan faktor risiko kesehatan lainnya. Data mencakup informasi dari berbagai individu yang dilengkapi dengan 19 fitur serta label risiko stroke.
 
 Fitur-fitur dalam dataset mencakup gejala umum seperti nyeri dada, sesak napas, kelelahan, detak jantung tidak teratur, tekanan darah tinggi, serta faktor tambahan seperti usia. Selain itu, terdapat dua fitur target, yakni persentase risiko stroke dan status risiko stroke dalam bentuk biner (berisiko atau tidak).
 
