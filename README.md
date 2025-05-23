@@ -285,6 +285,7 @@ Contoh Kasus:
 <p align="center">
   <img src="https://github.com/user-attachments/assets/b32e743f-ec06-4733-8b85-5822c3369b33" width="800"/>
 </p>
+
 **Insight:**
 - False Positive (78): Sebanyak 78 orang yang sebenarnya tidak berisiko diprediksi berisiko. Ini bisa berdampak ke over-treatment, tapi relatif tidak berbahaya.
 - False Negative (56): Sebanyak 56 orang yang sebenarnya berisiko diprediksi tidak berisiko. Ini adalah kesalahan yang lebih serius karena bisa menyebabkan keterlambatan penanganan.
