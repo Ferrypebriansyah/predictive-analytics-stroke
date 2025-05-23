@@ -83,3 +83,15 @@ Gambar di atas dapat diinterpretasikan sebagai berikut:
 16. Age: Distribusi usia cukup merata, tidak condong ke kelompok usia tertentu.
 17. Stroke Risk (%): Distribusi risiko stroke mengikuti pola normal, dengan mayoritas berada di risiko sedang.
 18. At Risk (Binary): Proporsi responden yang tergolong berisiko dan tidak berisiko relatif seimbang.
+
+### Exploratory Data Analysis - Multivariate Analysis
+#### 1. Membandingkan hubungan **usia** dan risiko stroke
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7d6224c9-fbd3-4739-bd02-3f55c9abb956" width="1000"/>
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/31550419-c551-4eac-836a-8ca4ad76ea66" width="1000"/>
+</p>
+
+> **insight:**
+> Pasien yang mengalami stroke memiliki rata-rata usia jauh lebih tinggi dibandingkan yang tidak mengalami stroke. Rata-rata usia penderita > stroke berada di atas 60 tahun. Sementara itu, rata-rata usia pasien yang tidak mengalami stroke berada di bawah 40 tahun.
