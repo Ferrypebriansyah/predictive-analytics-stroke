@@ -95,3 +95,10 @@ Gambar di atas dapat diinterpretasikan sebagai berikut:
 
 > **insight:**
 > Pasien yang mengalami stroke memiliki rata-rata usia jauh lebih tinggi dibandingkan yang tidak mengalami stroke. Rata-rata usia penderita > stroke berada di atas 60 tahun. Sementara itu, rata-rata usia pasien yang tidak mengalami stroke berada di bawah 40 tahun.
+
+#### 2. Hubungan Gejala dengan Risiko Stroke (Multivariate Countplot)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/68572ed8-80ef-4fbc-b556-9cf04ba53675" width="500"/>
+</p>
+>**insight**: Usia dan tekanan darah tinggi merupakan faktor risiko yang cukup kuat terhadap stroke. Gejala seperti sesak napas, kelelahan, >detak jantung tidak teratur, dan nyeri dada juga ikut berkontribusi, meskipun dalam tingkat korelasi yang lebih lemah.
+
