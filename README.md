@@ -136,14 +136,14 @@ Gambar di atas dapat diinterpretasikan sebagai berikut:
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/30c7f493-4f75-4f34-8973-24c7f0cfe7d0" width="800"/>
+  <img src="https://github.com/user-attachments/assets/30c7f493-4f75-4f34-8973-24c7f0cfe7d0" width="600"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c1cc04ba-4440-4c57-9525-ecedf6d20203" width="800"/>
+  <img src="https://github.com/user-attachments/assets/c1cc04ba-4440-4c57-9525-ecedf6d20203" width="600"/>
 </p>
 
-Dari hasil 
+> **Hasil Visualisasi Boxplotnya yaitu:** 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/24883813-0951-4d52-905a-429cbf3c5937" width="800"/>
 </p>
