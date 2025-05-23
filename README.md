@@ -100,5 +100,8 @@ Gambar di atas dapat diinterpretasikan sebagai berikut:
 <p align="center">
   <img src="https://github.com/user-attachments/assets/68572ed8-80ef-4fbc-b556-9cf04ba53675" width="700"/>
 </p>
-> **insight**: Usia dan tekanan darah tinggi merupakan faktor risiko yang cukup kuat terhadap stroke. Gejala seperti sesak napas, kelelahan, >detak jantung tidak teratur, dan nyeri dada juga ikut berkontribusi, meskipun dalam tingkat korelasi yang lebih lemah.
+
+> **insight:**
+> Usia dan tekanan darah tinggi merupakan faktor risiko yang cukup kuat terhadap stroke. Gejala seperti sesak napas, kelelahan,
+> detak jantung tidak teratur, dan nyeri dada juga ikut berkontribusi, meskipun dalam tingkat korelasi yang lebih lemah.
 
