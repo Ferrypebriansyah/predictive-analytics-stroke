@@ -33,7 +33,8 @@ Untuk menjawab permasalahan yang telah dirumuskan, solusi yang diusulkan dalam p
 2. Penerapan inference untuk menentukan gejala dan faktor mana yang paling signifikan dalam mempengaruhi risiko stroke.
 
 ## Data Understanding
-Dataset yang digunakan untuk memprediksi risiko stroke pada seseorang diperoleh dari platform open source Kaggle dan dipublikasikan oleh mahatiratusher[sumber](https://www.kaggle.com/datasets/mahatiratusher/stroke-risk-prediction-dataset). Dataset ini dirancang untuk memperkirakan kemungkinan seseorang mengalami stroke berdasarkan berbagai gejala klinis dan faktor risiko kesehatan lainnya. Data mencakup informasi dari berbagai individu yang dilengkapi dengan 19 fitur serta label risiko stroke.
+[Stroke Risk Prediction Dataset Based on Symptoms](https://www.kaggle.com/datasets/mahatiratusher/stroke-risk-prediction-dataset)
+Dataset yang digunakan untuk memprediksi risiko stroke pada seseorang diperoleh dari platform open source Kaggle dan dipublikasikan oleh mahatiratusher. Dataset ini dirancang untuk memperkirakan kemungkinan seseorang mengalami stroke berdasarkan berbagai gejala klinis dan faktor risiko kesehatan lainnya. Data mencakup informasi dari berbagai individu yang dilengkapi dengan 19 fitur serta label risiko stroke.
 
 Fitur-fitur dalam dataset mencakup gejala umum seperti nyeri dada, sesak napas, kelelahan, detak jantung tidak teratur, tekanan darah tinggi, serta faktor tambahan seperti usia. Selain itu, terdapat dua fitur target, yakni persentase risiko stroke dan status risiko stroke dalam bentuk biner (berisiko atau tidak).
 
