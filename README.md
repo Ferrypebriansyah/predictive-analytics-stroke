@@ -135,13 +135,20 @@ Gambar di atas dapat diinterpretasikan sebagai berikut:
   <img src="https://github.com/user-attachments/assets/a1b6ea7c-96b4-4519-b585-39ec14fb55b0" width="600"/>
 </p>
 
-> **Insight:** Tidak ditemukan adanya outlier dari hasil pemeriksaan.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/30c7f493-4f75-4f34-8973-24c7f0cfe7d0" width="800"/>
+</p>
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c1cc04ba-4440-4c57-9525-ecedf6d20203" width="800"/>
+</p>
 
+Dari hasil 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/24883813-0951-4d52-905a-429cbf3c5937" width="800"/>
+</p>
 
-
-
-
+> **Insight**: Fitur-fitur biner contohnya seperti Chest Pain, Shortness of Breath, dan Irregular Heartbeat tidak memiliki outlier, karena > memang hanya memiliki dua nilai yang valid (0 dan 1). Oleh karena itu, tidak perlu dilakukan deteksi atau penanganan outlier untuk fitur-> fitur ini.
 
 ## Data Preparation
 ### Data Cleaning
@@ -150,6 +157,16 @@ Gambar di atas dapat diinterpretasikan sebagai berikut:
   <img src="https://github.com/user-attachments/assets/eec69b39-1b89-42de-bb1b-eb5cecf5b25e" width="800"/>
 </p>
 
-#### 2. Mengecek dan menangani Missing Value
+hasil drop data duplikat:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/924ff3a4-b393-4dc2-80d3-e3400ed97646" width="800"/>
+</p>
+
+
+
+
+
+
+
 
 
