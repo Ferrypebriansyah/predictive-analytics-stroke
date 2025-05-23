@@ -230,7 +230,7 @@ Parameter ini menetapkan nilai seed untuk pengacakan proses internal SVM, sepert
 
 ### Evaluasi Hasil Perbandingan Algoritma
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/09c3fa25-8cf5-44cb-866f-439756b07c92" width="600"/>
+  <img src="https://github.com/user-attachments/assets/09c3fa25-8cf5-44cb-866f-439756b07c92" width="300"/>
 </p>
 
 | **Algoritma**                    | **Kelebihan**                                                                                                                    | **Kekurangan**                                                                                   |
@@ -242,7 +242,85 @@ Parameter ini menetapkan nilai seed untuk pengacakan proses internal SVM, sepert
 ## Evaluasi
 Dari hasil perbandingan 3 Algoritma diatas, saya memilih model `XGBoost` karena model menghasilkan nilai akurasi yang paling baik karena tidak mendekati overfitting.
 
-### 
+### Confusion Matrix
+Confusion matrix adalah sebuah tabel evaluasi yang digunakan untuk mengukur kinerja model klasifikasi dengan membandingkan antara nilai prediksi dan nilai aktual. Tabel ini terdiri dari empat komponen utama: True Positive (TP), True Negative (TN), False Positive (FP), dan False Negative (FN), yang membantu dalam menghitung metrik evaluasi seperti akurasi, presisi, recall, dan F1-score. Dengan melihat confusion matrix, kita dapat mengetahui jenis kesalahan yang sering dilakukan oleh model dan memperbaiki strategi klasifikasinya.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6037ec0f-0c5d-4357-a02d-332f98955ee9" width="600"/>
+</p>
+
+Istilah dalam confusion matrix beserta rumus evaluasinya:
+- True Positive (TP): Jumlah kasus positif yang berhasil diprediksi dengan benar sebagai positif oleh model.
+- False Positive (FP): Jumlah kasus yang sebenarnya negatif, namun secara keliru diklasifikasikan sebagai positif (juga dikenal sebagai kesalahan Tipe I).
+True Negative (TN): Jumlah kasus negatif yang tepat diprediksi sebagai negatif.
+- False Negative (FN): Jumlah kasus positif yang salah diklasifikasikan sebagai negatif (disebut juga kesalahan Tipe II).
+
+Berdasarkan keempat komponen tersebut, berikut metrik evaluasi yang bisa dihitung:
+- Akurasi = (TP + TN) / (TP + TN + FP + FN) → Menunjukkan seberapa besar proporsi prediksi yang tepat dibandingkan dengan keseluruhan prediksi.
+- Presisi (Precision) = TP / (TP + FP) → Mengukur tingkat ketepatan model saat menyatakan suatu data termasuk dalam kelas positif.
+- Recall (Sensitivitas) = TP / (TP + FN) → Menggambarkan sejauh mana model mampu menemukan semua data yang benar-benar positif.
+- F1 Score = 2 × (Precision × Recall) / (Precision + Recall) → Menyediakan rata-rata harmonis antara presisi dan recall, terutama berguna dalam kasus ketidakseimbangan kelas.
+
+Contoh Kasus:
+1. XGBoost
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/eca4d620-520e-4a13-b33f-38616111c0b5" width="800"/>
+</p>
+**Insight:**
+- True Negatives (TN): Sebanyak 4,732 model dengan benar mengenali orang yang tidak berisiko stroke.
+- True Positives (TP): Sebanyak 8,899 model dengan benar mengenali orang yang berisiko stroke.
+- False Negatives (FN): Sebanyak 58 orang yang seharusnya berisiko stroke tapi model tidak mengenalinya → ini paling krusial karena bisa fatal.
+- False Positives (FP): Sebanyak 107 orang yang tidak berisiko stroke tapi dikira berisiko → lebih dapat diterima dibanding FN
+
+3. Random Forest
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/dcca5f77-b625-44e8-8dcd-20fa23720101" width="800"/>
+</p>
+**Insight:**
+- False Positives (FP): Sebanyak 677 orang yang tidak berisiko stroke tapi model menganggap mereka berisiko.
+- False Negatives (FN): Sebanyak 431 orang yang sebenarnya berisiko stroke tapi tidak terdeteksi (lebih berbahaya secara medis).
+- True Positives (TP): 8,526 dan True Negatives (TN): 4,162 menunjukkan model cukup baik menangani kedua kelas.
+
+5. SVM
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b32e743f-ec06-4733-8b85-5822c3369b33" width="800"/>
+</p>
+**Insight:**
+- False Positive (78): Sebanyak 78 orang yang sebenarnya tidak berisiko diprediksi berisiko. Ini bisa berdampak ke over-treatment, tapi relatif tidak berbahaya.
+- False Negative (56): Sebanyak 56 orang yang sebenarnya berisiko diprediksi tidak berisiko. Ini adalah kesalahan yang lebih serius karena bisa menyebabkan keterlambatan penanganan.
+- True Negative (TN): Sebanyak 4761 orang yang
+Artinya orang tersebut memang tidak berisiko terkena stroke, dan model benar memprediksi mereka sebagai tidak berisiko.
+- True Positive (TP): Sebanyak 8901 orang yang memang berisiko terkena stroke, dan model berhasil mengklasifikasikan mereka dengan benar.
+
+## Kesimpulan 
+### 1. Faktor-faktor apa saja yang paling berkontribusi terhadap risiko seseorang mengalami stroke?
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/dbe64392-e6f0-4cc8-ba59-62d79a8a3d50" width="800"/>
+</p>
+**Insight:** Faktor yang paling berkontribusi seseorang mengalami Stroke adalah Faktor `Umur`.
+
+### 2. Apakah terdapat hubungan antara gejala (seperti nyeri dada, sesak napas, detak jantung tidak teratur, kelelahan, dan lainnya) dengan risiko stroke pada pasien?
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/10ab3d3b-92da-43da-83f6-0060c1a78352" width="800"/>
+</p>
+
+ Selanjutnya yaitu mencoba model inference dari XGBoost
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/939ef63f-afcd-4e0d-8cec-98488afda5c4" width="800"/>
+</p>
+
+**Insight:**
+Berdasarkan data yang Anda berikan, yaitu usia 45 tahun dengan sejumlah gejala seperti nyeri dada, rasa lelah, pusing, nyeri di leher/rahang/bahu/punggung, batuk terus-menerus, mual/muntah, tekanan darah tinggi, mendengkur atau sleep apnea, serta kecemasan berlebihan, model memprediksi bahwa Anda memiliki risiko stroke.
+
+Gejala-gejala dan kondisi yang dilaporkan menunjukkan adanya faktor risiko yang perlu diperhatikan dengan serius. Disarankan untuk segera berkonsultasi dengan tenaga medis guna mendapatkan pemeriksaan dan penanganan yang tepat demi mencegah kemungkinan komplikasi stroke di masa depan.
+
+
+
+
+
+
+
 
 
 
