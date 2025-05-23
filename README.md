@@ -109,6 +109,7 @@ Gambar di atas dapat diinterpretasikan sebagai berikut:
 > Usia dan tekanan darah tinggi merupakan faktor risiko yang cukup kuat terhadap stroke. Gejala seperti sesak napas, kelelahan,
 > detak jantung tidak teratur, dan nyeri dada juga ikut berkontribusi, meskipun dalam tingkat korelasi yang lebih lemah.
 
+### Data Quality Verification
 #### Melihat dan menampilkan baris data duplikat
 <p align="center">
   <img src="https://github.com/user-attachments/assets/af9194d6-6bdb-4bfc-99b4-a855a8498fa3" width="1000"/>
@@ -116,6 +117,31 @@ Gambar di atas dapat diinterpretasikan sebagai berikut:
 
 > **insight:**
 > Ditemukan sebanyak **1021** data duplikat dalam dataset ini. Oleh karena itu, selanjutnya akan dilakukan proses pembersihan data (data cleaning) sangat penting untuk memastikan bahwa dataset yang digunakan bebas dari redundansi, sehingga hasil prediksi menjadi lebih akurat dan dapat diandalkan.
+
+#### Memeriksa Missing Value
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f270d335-a168-4b2f-aba6-78c952cd4c18" width="400"/>
+</p>
+
+> **insight:** Tidak ditemukan missing value pada dataframe diatas
+
+
+#### Memeriksa Outlier
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cbef1f76-51e8-48b5-a3b4-bfbcc5d836ab" width="600"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a1b6ea7c-96b4-4519-b585-39ec14fb55b0" width="600"/>
+</p>
+
+> **Insight:** Tidak ditemukan adanya outlier dari hasil pemeriksaan.
+
+
+
+
+
+
 
 ## Data Preparation
 ### Data Cleaning
@@ -125,9 +151,5 @@ Gambar di atas dapat diinterpretasikan sebagai berikut:
 </p>
 
 #### 2. Mengecek dan menangani Missing Value
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/f270d335-a168-4b2f-aba6-78c952cd4c18" width="400"/>
-</p>
 
-> **insight:** Tidak ditemukan missing value pada dataframe diatas
 
