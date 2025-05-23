@@ -148,7 +148,10 @@ Gambar di atas dapat diinterpretasikan sebagai berikut:
   <img src="https://github.com/user-attachments/assets/24883813-0951-4d52-905a-429cbf3c5937" width="800"/>
 </p>
 
-> **Insight**: Fitur-fitur biner contohnya seperti Chest Pain, Shortness of Breath, dan Irregular Heartbeat tidak memiliki outlier, karena > memang hanya memiliki dua nilai yang valid (0 dan 1). Oleh karena itu, tidak perlu dilakukan deteksi atau penanganan outlier untuk fitur-> fitur ini.
+> **Insight**:
+> Fitur-fitur biner contohnya seperti Chest Pain, Shortness of Breath, dan Irregular Heartbeat tidak memiliki outlier,
+> karena memang hanya memiliki dua nilai yang valid (0 dan 1).
+> Oleh karena itu, tidak perlu dilakukan deteksi atau penanganan outlier untuk fitur-fitur ini.
 
 ## Data Preparation
 ### Data Cleaning
