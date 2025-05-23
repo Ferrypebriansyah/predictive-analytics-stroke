@@ -126,7 +126,8 @@ Gambar di atas dapat diinterpretasikan sebagai berikut:
 
 #### 2. Mengecek dan menangani Missing Value
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f270d335-a168-4b2f-aba6-78c952cd4c18" width="800"/>
+  <img src="https://github.com/user-attachments/assets/f270d335-a168-4b2f-aba6-78c952cd4c18" width="400"/>
 </p>
+
 > **insight:** Tidak ditemukan missing value pada dataframe diatas
 
