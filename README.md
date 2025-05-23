@@ -111,11 +111,11 @@ Gambar di atas dapat diinterpretasikan sebagai berikut:
 
 #### Melihat dan menampilkan baris data duplikat
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/af9194d6-6bdb-4bfc-99b4-a855a8498fa3" width="700"/>
+  <img src="https://github.com/user-attachments/assets/af9194d6-6bdb-4bfc-99b4-a855a8498fa3" width="1000"/>
 </p>
 
 > **insight:**
-> Ditemukan sebanyak 1021 data duplikat dalam dataset ini. Oleh karena itu, selanjutnya akan dilakukan proses pembersihan data (data cleaning) sangat penting untuk memastikan bahwa dataset yang digunakan bebas dari redundansi, sehingga hasil prediksi menjadi lebih akurat dan dapat diandalkan.
+> Ditemukan sebanyak **1021** data duplikat dalam dataset ini. Oleh karena itu, selanjutnya akan dilakukan proses pembersihan data (data cleaning) sangat penting untuk memastikan bahwa dataset yang digunakan bebas dari redundansi, sehingga hasil prediksi menjadi lebih akurat dan dapat diandalkan.
 
 ## Data Preparation
 
