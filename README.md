@@ -59,8 +59,10 @@ Secara keseluruhan, dataset ini memuat 70.000 data, yang masing-masing dapat dig
 | Cold Hands/Feet             | int64     | Tangan atau kaki terasa dingin (1 = ya, 0 = tidak)          |
 | Snoring/Sleep Apnea         | int64     | Mendengkur atau apnea tidur (1 = ya, 0 = tidak)             |
 | Anxiety/Feeling of Doom     | int64     | Merasa cemas atau takut (1 = ya, 0 = tidak)                 |
-| At Risk                     | int64     | Status risiko stroke (1 = berisiko, 0 = tidak)              |
+| Age                         | int64     | Umur pada pasien/responden                                  |
 | Stroke Risk (%)             | Float      | Estimasi probabilitas terjadinya stroke dalam persen (0 - 100%) |
+| At Risk                     | int64     | Status risiko stroke (1 = berisiko, 0 = tidak)              |
+
 
 
 ### Exploratory Data Analysis - Univariate Analysis
@@ -178,6 +180,60 @@ Target pada dataset ini adalah variabel `At Risk (Binary)`. Untuk itu kedua targ
 </p>
 Agar algoritma machine learning dapat bekerja secara optimal dan mencapai konvergensi lebih cepat, sangat disarankan untuk menggunakan data yang memiliki skala seragam dan distribusi mendekati normal. Proses standarisasi seperti yang dilakukan oleh StandardScaler membantu mengubah fitur data menjadi rentang yang konsisten dengan rata-rata nol dan standar deviasi satu. Hal ini sangat penting terutama ketika fitur memiliki satuan atau skala yang berbeda-beda, sehingga algoritma dapat memproses setiap fitur secara adil tanpa dipengaruhi oleh perbedaan skala.
 
+## Modeling
+### 1. XGBoost
+XGBoost (Extreme Gradient Boosting) merupakan salah satu algoritma yang sangat populer dalam dunia machine learning, terutama untuk tugas klasifikasi maupun regresi. XGBoost bekerja dengan membangun sekumpulan decision tree secara berurutan, di mana setiap pohon baru dibentuk untuk memperbaiki kesalahan dari model sebelumnya menggunakan pendekatan gradient boosting. Pada implementasi model XGBoost dalam kode di atas, beberapa parameter utama digunakan, yaitu:
+max_depth
+Parameter ini menentukan kedalaman maksimum dari setiap pohon keputusan yang dibangun. Semakin dalam pohon, semakin kompleks pola yang bisa ditangkap, tetapi juga meningkatkan risiko overfitting. Nilai max_depth ditentukan secara dinamis oleh Optuna pada rentang antara 3 hingga 15, untuk mencari keseimbangan antara kompleksitas model dan generalisasi.
+
+- `n_estimators`
+Merupakan jumlah total tree (pohon keputusan) yang dibangun dalam proses boosting. Nilai ini dioptimasi dalam rentang 50 hingga 200 oleh Optuna. Semakin banyak pohon, model biasanya menjadi lebih akurat, namun akan membutuhkan waktu pelatihan yang lebih lama.
+
+- `learning_rate`
+Mengatur seberapa besar kontribusi setiap pohon baru terhadap prediksi akhir. Nilai yang lebih kecil menyebabkan pembelajaran yang lebih lambat namun lebih stabil, sedangkan nilai besar mempercepat proses pembelajaran namun berpotensi overfitting. Optuna mencari nilai terbaik di antara 0.0001 hingga 0.1 (secara logaritmik).
+
+- `random_state = 42`
+Parameter ini digunakan untuk menjamin hasil yang konsisten ketika model dilatih ulang. Dengan nilai tetap, proses randomisasi dalam XGBoost menjadi deterministik sehingga eksperimen dapat direproduksi.
+
+- `n_jobs = -1`
+Menentukan jumlah CPU core yang digunakan saat pelatihan. Nilai -1 berarti XGBoost akan memanfaatkan seluruh core yang tersedia, sehingga pelatihan model dapat berlangsung lebih cepat.
+
+- `eval_metric = 'mlogloss'`
+Metrik evaluasi yang digunakan adalah multiclass logarithmic loss, yang umum dipakai dalam klasifikasi multi-kelas. Ini membantu XGBoost untuk menyesuaikan bobot model terhadap kesalahan prediksi kelas.
+
+`objective = 'multi:softmax'`
+Menentukan jenis tugas klasifikasi multi-kelas. Dengan 'multi:softmax', XGBoost akan mengklasifikasikan data ke salah satu dari beberapa kelas secara langsung (bukan probabilitas, melainkan prediksi kelas akhir).
+
+### 2. Random Forest
+Random Forest adalah algoritma ensemble yang terdiri dari kumpulan pohon keputusan (decision trees), dan bertujuan untuk meningkatkan akurasi serta kestabilan prediksi dengan menggabungkan hasil dari banyak pohon. Model ini cocok digunakan untuk tugas klasifikasi dan regresi karena mampu menangani data yang kompleks serta mengurangi risiko overfitting yang biasa terjadi pada satu pohon keputusan tunggal. Berikut penjelasan dari parameter yang digunakan pada model:
+
+- `n_estimators=100`
+Parameter ini menunjukkan bahwa model akan membentuk sebanyak 100 pohon keputusan. Setiap pohon dilatih pada subset data yang berbeda, dan hasil prediksi akhir akan diperoleh melalui voting mayoritas (untuk klasifikasi). Menambahkan jumlah pohon umumnya akan meningkatkan akurasi dan stabilitas model, meskipun waktu pelatihan juga akan bertambah.
+
+- `criterion="entropy"`
+Digunakan sebagai dasar untuk membagi node dalam setiap pohon. Kriteria ini mengacu pada information gain, yaitu ukuran penurunan ketidakpastian setelah pemisahan data dilakukan. Pemilihan "entropy" sebagai kriteria pembagi bertujuan untuk membangun pohon yang lebih informatif, meskipun prosesnya sedikit lebih berat dibandingkan "gini".
+
+- `max_depth=10`
+Menetapkan batas maksimal kedalaman tiap pohon keputusan. Pembatasan ini penting untuk mencegah pohon menjadi terlalu dalam dan terlalu cocok terhadap data latih (overfitting). Dengan kedalaman maksimal 10, model diharapkan mampu menangkap pola-pola penting tanpa kehilangan kemampuan generalisasi terhadap data baru.
+
+- `random_state=50`
+Parameter ini berfungsi untuk menjaga konsistensi hasil setiap kali model dijalankan ulang. Dengan menetapkan nilai tetap, semua proses acak dalam model (seperti pemilihan subset fitur atau data) akan menggunakan seed yang sama, sehingga hasil eksperimen dapat direproduksi.
+
+### 3. SVM
+Support Vector Machine (SVM) merupakan salah satu metode supervised learning yang sering digunakan dalam tugas klasifikasi maupun regresi. Prinsip utamanya adalah menemukan hyperplane optimal yang memisahkan kelas-kelas data dengan jarak maksimum antara titik data terdekat dari masing-masing kelas terhadap garis pemisah tersebut. SVM sangat efektif untuk menangani data berdimensi tinggi dan kompleksitas yang tinggi. Pada model SVM yang digunakan ini, terdapat beberapa parameter penting:
+
+- `kernel='rbf'`
+Kernel Radial Basis Function (RBF) digunakan untuk mengubah data input ke dalam ruang berdimensi lebih tinggi sehingga memungkinkan pemisahan kelas yang tidak linear. Kernel ini sangat fleksibel dalam menangani kasus di mana batas antar kelas tidak dapat dipisahkan secara garis lurus dalam ruang aslinya.
+
+- `random_state=42`
+Parameter ini menetapkan nilai seed untuk pengacakan proses internal SVM, seperti pemilihan subset data saat pelatihan. Tujuannya adalah agar proses pelatihan model dapat menghasilkan hasil yang konsisten dan dapat diulang kembali dalam eksperimen yang sama.
+
+### Evaluasi Hasil Perbandingan Algoritma
+| **Algoritma**                    | **Kelebihan**                                                                                                                    | **Kekurangan**                                                                                   |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **XGBoost Classifier**           | - Tingkat akurasi sangat tinggi<br>- Dilengkapi regularisasi untuk cegah overfitting<br>- Tangguh untuk data yang tidak seimbang | - Waktu pelatihan cenderung lebih lama<br>- Perlu penyesuaian parameter yang kompleks            |
+| **Random Forest**                | - Dapat mengolah data non-linear dan banyak fitur<br>- Lebih tahan terhadap overfitting dibanding pohon tunggal                  | - Model sulit dijelaskan secara intuitif<br>- Butuh sumber daya komputasi besar (memori & waktu) |
+| **Support Vector Machine (SVM)** | - Sangat cocok untuk data berdimensi tinggi<br>- Ideal untuk dataset kecil dengan pemisahan kelas yang jelas                     | - Tidak optimal untuk dataset besar<br>- Sensitif terhadap pilihan kernel dan parameter          |
 
 
 
