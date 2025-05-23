@@ -87,10 +87,10 @@ Gambar di atas dapat diinterpretasikan sebagai berikut:
 ### Exploratory Data Analysis - Multivariate Analysis
 #### 1. Membandingkan hubungan **usia** dan risiko stroke
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7d6224c9-fbd3-4739-bd02-3f55c9abb956" width="1000"/>
+  <img src="https://github.com/user-attachments/assets/7d6224c9-fbd3-4739-bd02-3f55c9abb956" width="500"/>
 </p>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/31550419-c551-4eac-836a-8ca4ad76ea66" width="1000"/>
+  <img src="https://github.com/user-attachments/assets/31550419-c551-4eac-836a-8ca4ad76ea66" width="500"/>
 </p>
 
 > **insight:**
