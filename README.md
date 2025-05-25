@@ -186,27 +186,24 @@ Agar algoritma machine learning dapat bekerja secara optimal dan mencapai konver
 
 ## Modeling
 ### 1. XGBoost
-XGBoost (Extreme Gradient Boosting) merupakan salah satu algoritma yang sangat populer dalam dunia machine learning, terutama untuk tugas klasifikasi maupun regresi. XGBoost bekerja dengan membangun sekumpulan decision tree secara berurutan, di mana setiap pohon baru dibentuk untuk memperbaiki kesalahan dari model sebelumnya menggunakan pendekatan gradient boosting. Pada implementasi model XGBoost dalam kode di atas, beberapa parameter utama digunakan, yaitu:
-max_depth
-Parameter ini menentukan kedalaman maksimum dari setiap pohon keputusan yang dibangun. Semakin dalam pohon, semakin kompleks pola yang bisa ditangkap, tetapi juga meningkatkan risiko overfitting. Nilai max_depth ditentukan secara dinamis oleh Optuna pada rentang antara 3 hingga 15, untuk mencari keseimbangan antara kompleksitas model dan generalisasi.
+XGBoost (Extreme Gradient Boosting) adalah salah satu algoritma yang sangat populer dan andal dalam dunia machine learning, khususnya untuk tugas klasifikasi dan regresi. XGBoost bekerja dengan membangun sejumlah decision tree secara berurutan, di mana setiap pohon baru dibentuk untuk memperbaiki kesalahan dari model sebelumnya melalui pendekatan gradient boosting. Pada implementasi model di atas, proses tuning hyperparameter dilakukan dengan menggunakan Optuna untuk memperoleh performa terbaik. Berikut penjelasan parameter utama yang digunakan dalam model akhir:
 
-- `n_estimators`
-Merupakan jumlah total tree (pohon keputusan) yang dibangun dalam proses boosting. Nilai ini dioptimasi dalam rentang 50 hingga 200 oleh Optuna. Semakin banyak pohon, model biasanya menjadi lebih akurat, namun akan membutuhkan waktu pelatihan yang lebih lama.
+- `max_depth = 13`
+Menentukan kedalaman maksimum setiap pohon keputusan. Semakin besar nilai ini, semakin kompleks pola yang dapat ditangkap oleh model, namun juga meningkatkan risiko overfitting. Nilai 13 merupakan hasil optimasi yang memberikan keseimbangan antara akurasi dan generalisasi.
 
-- `learning_rate`
-Mengatur seberapa besar kontribusi setiap pohon baru terhadap prediksi akhir. Nilai yang lebih kecil menyebabkan pembelajaran yang lebih lambat namun lebih stabil, sedangkan nilai besar mempercepat proses pembelajaran namun berpotensi overfitting. Optuna mencari nilai terbaik di antara 0.0001 hingga 0.1 (secara logaritmik).
+- `n_estimators = 52`
+Merupakan jumlah total pohon keputusan yang dibangun dalam proses boosting. Jumlah ini dikompromikan untuk menjaga performa prediksi sekaligus efisiensi waktu pelatihan. Dengan 52 estimators, model dinilai cukup dalam menangkap pola data tanpa menyebabkan overfitting.
 
-- `random_state = 42`
-Parameter ini digunakan untuk menjamin hasil yang konsisten ketika model dilatih ulang. Dengan nilai tetap, proses randomisasi dalam XGBoost menjadi deterministik sehingga eksperimen dapat direproduksi.
+- `learning_rate = 0.035`
+Mengatur kontribusi masing-masing pohon terhadap prediksi akhir. Nilai ini termasuk rendah, yang artinya model belajar secara bertahap untuk menghindari perubahan prediksi yang drastis dan menjaga stabilitas proses pelatihan. Nilai ini dipilih dari rentang logaritmik antara 0.0001 hingga 0.1 melalui proses tuning.
+
+- `random_state = 9`
+Digunakan untuk memastikan hasil pelatihan yang konsisten dan dapat direproduksi. Dengan nilai ini, setiap proses pelatihan ulang akan menghasilkan model yang identik.
 
 - `n_jobs = -1`
-Menentukan jumlah CPU core yang digunakan saat pelatihan. Nilai -1 berarti XGBoost akan memanfaatkan seluruh core yang tersedia, sehingga pelatihan model dapat berlangsung lebih cepat.
+Menandakan bahwa semua core CPU yang tersedia akan digunakan selama proses pelatihan, sehingga mempercepat waktu komputasi secara signifikan.
 
-- `eval_metric = 'mlogloss'`
-Metrik evaluasi yang digunakan adalah multiclass logarithmic loss, yang umum dipakai dalam klasifikasi multi-kelas. Ini membantu XGBoost untuk menyesuaikan bobot model terhadap kesalahan prediksi kelas.
-
-- `objective = 'multi:softmax'`
-Menentukan jenis tugas klasifikasi multi-kelas. Dengan 'multi:softmax', XGBoost akan mengklasifikasikan data ke salah satu dari beberapa kelas secara langsung (bukan probabilitas, melainkan prediksi kelas akhir).
+> Model yang dihasilkan dengan kombinasi parameter ini mampu mencapai akurasi 93.57%, menunjukkan performa klasifikasi yang > sangat baik dalam mendeteksi risiko stroke berdasarkan fitur yang tersedia.
 
 ### 2. Random Forest
 Random Forest adalah algoritma ensemble yang terdiri dari kumpulan pohon keputusan (decision trees), dan bertujuan untuk meningkatkan akurasi serta kestabilan prediksi dengan menggabungkan hasil dari banyak pohon. Model ini cocok digunakan untuk tugas klasifikasi dan regresi karena mampu menangani data yang kompleks serta mengurangi risiko overfitting yang biasa terjadi pada satu pohon keputusan tunggal. Berikut penjelasan dari parameter yang digunakan pada model:
