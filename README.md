@@ -19,18 +19,18 @@ Oleh karena itu, pemahaman tentang faktor-faktor risiko yang memengaruhi stroke 
 ## Business Understanding
 
 ### Problem Statements
-1.   Faktor-faktor apa saja yang paling berkontribusi terhadap risiko seseorang mengalami stroke?
-2.   Apakah terdapat hubungan antara gejala (seperti nyeri dada, sesak napas, detak jantung tidak teratur, kelelahan, dan lainnya) dengan risiko stroke pada pasien?
+1.  Faktor-faktor apa saja yang paling berkontribusi terhadap risiko seseorang mengalami stroke?
+2.  Bagaimana model Machine Learning dapat memprediksi apakah seseorang berpotensi terkena stroke berdasarkan kondisi yang mereka input?
 
 ### Goals
 1. Mengidentifikasi faktor-faktor utama yang berkontribusi terhadap risiko seseorang mengalami stroke, berdasarkan atribut seperti usia dan berbagai gejala klinis (contoh: nyeri dada, sesak napas, detak jantung tidak teratur, dan lainnya).
-2. Menganalisis hubungan antara gejala yang dialami pasien dengan kemungkinan risiko stroke.
+2. Mengetahui bagaimana cara model Machine Learning dapat memprediksi apakah seseorang berpotensi terkena stroke berdasarkan kondisi yang mereka input
 
 ### Solution statements
 Untuk menjawab permasalahan yang telah dirumuskan, solusi yang diusulkan dalam proyek ini adalah melakukan analisis data berdasarkan riwayat kesehatan dan gejala yang dialami pasien. Langkah-langkah utama dalam solusi ini meliputi:
 
 1. Eksplorasi data (Exploratory Data Analysis) untuk memahami distribusi variabel, mendeteksi pola-pola penting, dan mengidentifikasi hubungan awal antara gejala, kondisi kesehatan, serta faktor risiko dengan kemungkinan terjadinya stroke.
-2. Penerapan inference untuk menentukan gejala dan faktor mana yang paling signifikan dalam mempengaruhi risiko stroke.
+2. Menguji model Machine Learning yang mampu memprediksi risiko stroke seseorang secara akurat berdasarkan data input kondisi kesehatan (seperti tekanan darah, detak jantung, gejala nyeri dada, gaya hidup, dan faktor risiko lainnya), guna membantu deteksi dini dan pengambilan keputusan medis yang lebih cepat dan tepat.
 
 ## Data Understanding
 [Stroke Risk Prediction Dataset Based on Symptoms](https://www.kaggle.com/datasets/mahatiratusher/stroke-risk-prediction-dataset)
