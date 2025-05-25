@@ -254,7 +254,7 @@ Confusion matrix adalah sebuah tabel evaluasi yang digunakan untuk mengukur kine
 Istilah dalam confusion matrix beserta rumus evaluasinya:
 - True Positive (TP): Jumlah kasus positif yang berhasil diprediksi dengan benar sebagai positif oleh model.
 - False Positive (FP): Jumlah kasus yang sebenarnya negatif, namun secara keliru diklasifikasikan sebagai positif (juga dikenal sebagai kesalahan Tipe I).
-True Negative (TN): Jumlah kasus negatif yang tepat diprediksi sebagai negatif.
+- True Negative (TN): Jumlah kasus negatif yang tepat diprediksi sebagai negatif.
 - False Negative (FN): Jumlah kasus positif yang salah diklasifikasikan sebagai negatif (disebut juga kesalahan Tipe II).
 
 Berdasarkan keempat komponen tersebut, berikut metrik evaluasi yang bisa dihitung:
