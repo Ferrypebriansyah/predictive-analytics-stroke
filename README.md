@@ -31,7 +31,7 @@ Untuk menjawab permasalahan yang telah dirumuskan, solusi yang diusulkan dalam p
 
 1. Eksplorasi data (Exploratory Data Analysis) untuk memahami distribusi variabel, mendeteksi pola-pola penting, dan mengidentifikasi hubungan awal antara gejala, kondisi kesehatan, serta faktor risiko dengan kemungkinan terjadinya stroke.
 2. Menguji model Machine Learning yang mampu memprediksi risiko stroke seseorang secara akurat berdasarkan data input kondisi kesehatan (seperti tekanan darah, detak jantung, gejala nyeri dada, gaya hidup, dan faktor risiko lainnya), guna membantu deteksi dini dan pengambilan keputusan medis yang lebih cepat dan tepat.
-3. 
+ 
 ## Data Understanding
 [Stroke Risk Prediction Dataset Based on Symptoms](https://www.kaggle.com/datasets/mahatiratusher/stroke-risk-prediction-dataset)
 
