@@ -124,7 +124,7 @@ Gambar di atas dapat diinterpretasikan sebagai berikut:
 
 #### Memeriksa Missing Value
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f270d335-a168-4b2f-aba6-78c952cd4c18" width="400"/>
+  <img src="https://github.com/user-attachments/assets/9c19d7de-637b-47a2-a39a-98abbf3e1eb1" width="400"/>
 </p>
 
 > **insight:** Tidak ditemukan missing value pada dataframe diatas
@@ -132,24 +132,26 @@ Gambar di atas dapat diinterpretasikan sebagai berikut:
 
 #### Memeriksa Outlier
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/cbef1f76-51e8-48b5-a3b4-bfbcc5d836ab" width="600"/>
+  <img src="https://github.com/user-attachments/assets/c46f3774-c76e-48b6-ab57-386ef7fea6e2" width="600"/>
+</p>
+
+
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c1369876-6b80-419e-a12a-c9bc067b2c1b" width="600"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a1b6ea7c-96b4-4519-b585-39ec14fb55b0" width="600"/>
+  <img src="https://github.com/user-attachments/assets/f31e5273-462c-4e5e-9c6e-7ffeb8f93432" width="600"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/30c7f493-4f75-4f34-8973-24c7f0cfe7d0" width="600"/>
-</p>
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/c1cc04ba-4440-4c57-9525-ecedf6d20203" width="600"/>
+  <img src="https://github.com/user-attachments/assets/a81edf5e-1840-46fe-9a24-c9e8750ab540" width="600"/>
 </p>
 
 > **Hasil Visualisasi Boxplotnya yaitu:** 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/24883813-0951-4d52-905a-429cbf3c5937" width="800"/>
+  <img src="https://github.com/user-attachments/assets/bd3684b9-1fe8-4cd6-b77d-1e9033c94bbe" width="800"/>
 </p>
 
 > **Insight**:
