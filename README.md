@@ -266,7 +266,7 @@ Berdasarkan keempat komponen tersebut, berikut metrik evaluasi yang bisa dihitun
 Contoh Kasus:
 1. XGBoost
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/155a8c62-6b6f-4a1f-8d78-a3996832024e" width="800"/>
+  <img src="https://github.com/user-attachments/assets/155a8c62-6b6f-4a1f-8d78-a3996832024e" width="500"/>
 </p>
 
 **Insight**:
@@ -278,7 +278,7 @@ Contoh Kasus:
 
 3. Random Forest
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/fe564f87-a2d5-4936-8962-9d856067ff0a" width="800"/>
+  <img src="https://github.com/user-attachments/assets/fe564f87-a2d5-4936-8962-9d856067ff0a" width="500"/>
 </p>
 
 **Insight:**
@@ -288,7 +288,7 @@ Contoh Kasus:
 
 5. SVM
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a7dabb41-dab6-4d33-a348-29d03725d8e5" width="800"/>
+  <img src="https://github.com/user-attachments/assets/a7dabb41-dab6-4d33-a348-29d03725d8e5" width="500"/>
 </p>
 
 **Insight:**
@@ -301,20 +301,20 @@ Artinya orang tersebut memang tidak berisiko terkena stroke, dan model benar mem
 ## Kesimpulan 
 ### 1. Faktor-faktor apa saja yang paling berkontribusi terhadap risiko seseorang mengalami stroke?
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/0ade5f97-ae3d-4c1e-9f07-ce39049fb9f4" width="500"/>
+  <img src="https://github.com/user-attachments/assets/0ade5f97-ae3d-4c1e-9f07-ce39049fb9f4" width="600"/>
 </p>
 
 **Insight:** Faktor yang paling berkontribusi seseorang mengalami Stroke adalah Faktor `Umur`(Age).
 
 ### 2. Bagaimana model Machine Learning dapat memprediksi apakah seseorang berpotensi terkena stroke berdasarkan kondisi yang mereka input?
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/58aca2fe-d508-4197-be3a-792b5ec71df7" width="500"/>
+  <img src="https://github.com/user-attachments/assets/58aca2fe-d508-4197-be3a-792b5ec71df7" width="600"/>
 </p>
 
  Selanjutnya yaitu mencoba model inference dari XGBoost
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f5e9941a-4d69-42a5-acad-f80d8c32b266" width="500"/>
+  <img src="https://github.com/user-attachments/assets/f5e9941a-4d69-42a5-acad-f80d8c32b266" width="600"/>
 </p>
 
 
