@@ -20,23 +20,23 @@ Oleh karena itu, pemahaman tentang faktor-faktor risiko yang memengaruhi stroke 
 
 ### Problem Statements
 1.   Faktor-faktor apa saja yang paling berkontribusi terhadap risiko seseorang mengalami stroke?
-2.   Apakah terdapat hubungan antara gejala (seperti nyeri dada, sesak napas, detak jantung tidak teratur, kelelahan, dan lainnya) dengan risiko stroke pada pasien?
+2.   Bagaimana model Machine Learning dapat memprediksi apakah seseorang berpotensi terkena stroke berdasarkan kondisi yang mereka input?
 
 ### Goals
 1. Mengidentifikasi faktor-faktor utama yang berkontribusi terhadap risiko seseorang mengalami stroke, berdasarkan atribut seperti usia dan berbagai gejala klinis (contoh: nyeri dada, sesak napas, detak jantung tidak teratur, dan lainnya).
-2. Menganalisis hubungan antara gejala yang dialami pasien dengan kemungkinan risiko stroke.
+2. Mengetahui bagaimana cara model Machine Learning dapat memprediksi apakah seseorang berpotensi terkena stroke berdasarkan kondisi yang mereka input
 
 ### Solution statements
 Untuk menjawab permasalahan yang telah dirumuskan, solusi yang diusulkan dalam proyek ini adalah melakukan analisis data berdasarkan riwayat kesehatan dan gejala yang dialami pasien. Langkah-langkah utama dalam solusi ini meliputi:
 
 1. Eksplorasi data (Exploratory Data Analysis) untuk memahami distribusi variabel, mendeteksi pola-pola penting, dan mengidentifikasi hubungan awal antara gejala, kondisi kesehatan, serta faktor risiko dengan kemungkinan terjadinya stroke.
-2. Penerapan inference untuk menentukan gejala dan faktor mana yang paling signifikan dalam mempengaruhi risiko stroke.
-
+2. Menguji model Machine Learning yang mampu memprediksi risiko stroke seseorang secara akurat berdasarkan data input kondisi kesehatan (seperti tekanan darah, detak jantung, gejala nyeri dada, gaya hidup, dan faktor risiko lainnya), guna membantu deteksi dini dan pengambilan keputusan medis yang lebih cepat dan tepat.
+3. 
 ## Data Understanding
 [Stroke Risk Prediction Dataset Based on Symptoms](https://www.kaggle.com/datasets/mahatiratusher/stroke-risk-prediction-dataset)
 
 
-Dataset yang digunakan untuk memprediksi risiko stroke pada seseorang diperoleh dari platform open source Kaggle dan dipublikasikan oleh mahatiratusher. Dataset ini dirancang untuk memperkirakan kemungkinan seseorang mengalami stroke berdasarkan berbagai gejala klinis dan faktor risiko kesehatan lainnya. Data mencakup informasi dari berbagai individu yang dilengkapi dengan 19 fitur serta label risiko stroke.
+Dataset yang digunakan untuk memprediksi risiko stroke pada seseorang diperoleh dari platform open source Kaggle dan dipublikasikan oleh mahatiratusher. Dataset ini dirancang untuk memperkirakan kemungkinan seseorang mengalami stroke berdasarkan berbagai gejala klinis dan faktor risiko kesehatan lainnya. Data mencakup informasi dari berbagai individu yang dilengkapi dengan 18 fitur serta label risiko stroke.
 
 Fitur-fitur dalam dataset mencakup gejala umum seperti nyeri dada, sesak napas, kelelahan, detak jantung tidak teratur, tekanan darah tinggi, serta faktor tambahan seperti usia. Selain itu, terdapat dua fitur target, yakni persentase risiko stroke dan status risiko stroke dalam bentuk biner (berisiko atau tidak).
 
